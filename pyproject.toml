@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "fastapi-users-redisom"
+version = "0.1.0"
+description = "Database adapter for RedisOM"
+authors = ["Tobi-De <tobidegnon@protonmail.com>"]
+homepage = "https://tobi-de.github.io/fastapi-users-redisom"
+repository = "https://github.com/Tobi-De/fastapi-users-redisom"
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 5 - Production/Stable",
+    "Framework :: FastAPI",
+    "Framework :: AsyncIO",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Internet :: WWW/HTTP :: Session",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi-users = ">=10.0.0"
+redis-om = "^0.0.27"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+pytest = "^7.1.2"
+requests = "^2.27.1"
+isort = "^5.10.1"
+pytest-asyncio = "^0.18.3"
+flake8-docstrings = "^1.6.0"
+black = "^22.3.0"
+mypy = "^0.950"
+codecov = "^2.1.12"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.7.0"
+asynctest = "^0.13.0"
+asgi-lifespan = "^1.0.1"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+addopts = "--ignore=test_build.py"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
